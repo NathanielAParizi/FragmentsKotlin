@@ -3,12 +3,14 @@ package com.example.fragmentskotlin
 import android.content.Context
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import android.widget.Toast.LENGTH_LONG
+import kotlinx.android.synthetic.main.list_row_items.*
 
 /**
  * A simple [Fragment] subclass.
@@ -16,7 +18,7 @@ import android.widget.Toast.LENGTH_LONG
  * [RecyclerViewFragment.OnFragmentInteractionListener] interface
  * to handle interaction events.
  */
-class RecyclerViewFragment : Fragment(){
+class RecyclerViewFragment : Fragment(), View.OnClickListener{
     private var listener: OnFragmentInteractionListener? = null
 
 
@@ -46,8 +48,15 @@ class RecyclerViewFragment : Fragment(){
     interface OnFragmentInteractionListener {
         fun onFragmentInteraction(string :String)
 
+
     }
 
+    override fun onClick(v: View?) {
+
+            listener?.onFragmentInteraction(txtName.text.toString())
+        Log.v("FRAG",txtName.text.toString())
+
+    }
 
 
 }

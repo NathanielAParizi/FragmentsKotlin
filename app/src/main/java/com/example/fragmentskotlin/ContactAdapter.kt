@@ -8,8 +8,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.list_row_items.view.*
 
+
+
+
 class ContactAdapter(val contactList: ArrayList<Contact>) :
     RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
+
+
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactAdapter.ViewHolder {
 
         val view =
@@ -41,6 +47,8 @@ class ContactAdapter(val contactList: ArrayList<Contact>) :
             itemView.txtName.text = contact.name
             itemView.txtPhoneNumber.text = contact.phoneNumber
             itemView.setOnClickListener {
+
+                Log.v("TAG",contact.name)
 
 
 

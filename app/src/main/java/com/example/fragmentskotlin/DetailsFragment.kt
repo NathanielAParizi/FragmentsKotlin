@@ -37,6 +37,9 @@ class DetailsFragment : Fragment() {
 
     interface OnFragmentInteractionListener {
         fun onFragmentInteraction(string: String)
-    }
+
+
+
+     }
 
 }

@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity(), DetailsFragment.OnFragmentInteractionL
     val recyclerViewFragment by lazy { RecyclerViewFragment() }
     val contactList by lazy { populateContactList() }
 
+
+
     lateinit var blueValue: String
 
 
